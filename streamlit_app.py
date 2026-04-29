@@ -176,10 +176,10 @@ try:
         
         # Custom HTML profile cards
         profiles = [
-            ("Christopher Suarez", "Co-Founder", "https://linkedin.com/in/placeholder-christopher"),
-            ("Baptiste Auzeau", "Co-Founder", "https://linkedin.com/in/placeholder-baptiste"),
-            ("Athina Karamalis", "Co-Founder", "https://linkedin.com/in/placeholder-athina"),
-            ("Julia von Boehm", "Co-Founder", "https://linkedin.com/in/placeholder-julia")
+            ("Christopher Suarez", "Co-Founder", "https://www.linkedin.com/in/christopher-suarez-70076b1b7?utm_source=share_via&utm_content=profile&utm_medium=member_ios"),
+            ("Baptiste Auzeau", "Co-Founder", "https://www.linkedin.com/in/baptisteauzeau?utm_source=share_via&utm_content=profile&utm_medium=member_ios"),
+            ("Athina Karamalis", "Co-Founder", "https://www.linkedin.com/in/athinakaramalis?utm_source=share_via&utm_content=profile&utm_medium=member_ios"),
+            ("Julia von Boehm", "Co-Founder", "https://www.linkedin.com/in/juliavonboehm?utm_source=share_via&utm_content=profile&utm_medium=member_ios")
         ]
         
         for name, title, link in profiles:
