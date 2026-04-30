@@ -197,23 +197,35 @@ try:
         st.markdown("### 📰 Featured Press")
         st.caption("Download the latest media coverage")
         
-        # Placeholders for actual PDF data. Currently just downloads empty txt files for demonstration.
-        # Replace `data="PDF_BYTES_HERE"` with your actual file loading logic later.
-        st.download_button(
-            label="📄 Download WWD Feature (Apr 9)",
-            data="Placeholder content for WWD Article", 
-            file_name="WWD_Feature_April9.pdf",
-            mime="application/pdf",
-            use_container_width=True
-        )
-        
-        st.download_button(
-            label="📄 Download Vogue Italia Coverage",
-            data="Placeholder content for Vogue Italia Article", 
-            file_name="Vogue_Italia_Coverage.pdf",
-            mime="application/pdf",
-            use_container_width=True
-        )
+        # 1. Load and read the WWD PDF
+        try:
+            with open("WWD_April.pdf", "rb") as pdf_file:
+                wwd_pdf_bytes = pdf_file.read()
+                
+            st.download_button(
+                label="📄 Download WWD Feature (Apr 9)",
+                data=wwd_pdf_bytes, 
+                file_name="WWD_Feature_April9.pdf",
+                mime="application/pdf",
+                use_container_width=True
+            )
+        except FileNotFoundError:
+            st.warning("WWD PDF file not found. Please check the file upload.")
+
+        # 2. Load and read the Vogue Italia PDF
+        try:
+            with open("Vogue_Italia.pdf", "rb") as pdf_file:
+                vogue_pdf_bytes = pdf_file.read()
+                
+            st.download_button(
+                label="📄 Download Vogue Italia Coverage",
+                data=vogue_pdf_bytes, 
+                file_name="Vogue_Italia_Coverage.pdf",
+                mime="application/pdf",
+                use_container_width=True
+            )
+        except FileNotFoundError:
+            st.warning("Vogue Italia PDF file not found. Please check the file upload.")
         
         st.divider()
         
