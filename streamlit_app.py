@@ -214,7 +214,7 @@ try:
 
         # 2. Load and read the Vogue Italia PDF
         try:
-            with open("Vogue_Italia.pdf", "rb") as pdf_file:
+            with open("ABW_Vogue_Italia_ENG.pdf", "rb") as pdf_file:
                 vogue_pdf_bytes = pdf_file.read()
                 
             st.download_button(
